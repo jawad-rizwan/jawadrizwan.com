@@ -1,1 +1,2 @@
-## Welcome to jawadrizwan.com. This is my personal website.
+## jawadrizwan.com
+Welcome to my personal website! This is the code for it.

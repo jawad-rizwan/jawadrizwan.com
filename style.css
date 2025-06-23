@@ -1,0 +1,113 @@
+:root {
+  --blue: #003366;
+  --gold: #ffcc00;
+  --light-bg: #f4f4f4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  background: var(--light-bg);
+  color: #333;
+  line-height: 1.6;
+}
+
+* {
+  cursor: url('cursor.ico'), auto; 
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+/* Navbar */
+nav {
+  background: var(--blue);
+  color: white;
+  padding: 15px 0;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Main content */
+main {
+  background: white;
+  padding: 60px 30px;
+  border-radius: 12px;
+  margin-top: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+main h1 {
+  color: var(--blue);
+  margin-bottom: 20px;
+}
+
+main p, main ul {
+  font-size: 1.1em;
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background: var(--blue);
+  color: white;
+  font-size: 0.9em;
+}
+
+.homepage-photo {
+  width: 450px;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+.project-title {
+  text-align: left;
+  margin-left: 150px; 
+}
+
+.project-title,
+.project p {
+  margin-left: 150;
+  text-align: left;
+}
+
+

@@ -8,6 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: url('cursor.ico'), auto; 
 }
 
 body {
@@ -15,10 +16,6 @@ body {
   background: var(--light-bg);
   color: #333;
   line-height: 1.6;
-}
-
-* {
-  cursor: url('cursor.ico'), auto; 
 }
 
 .container {
@@ -39,6 +36,7 @@ nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 
 .logo {
@@ -79,9 +77,11 @@ main h1 {
 
 main p, main ul {
   font-size: 1.1em;
-  max-width: 700px;
+  max-width: 500px;
   margin: auto;
-  text-align: left;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 footer {
@@ -95,19 +95,77 @@ footer {
 
 .homepage-photo {
   width: 450px;
+  max-width: 90%;
   border-radius: 12px;
   margin-top: 30px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .project-title {
-  text-align: left;
-  margin-left: 150px; 
+  text-align: center;
+  margin-left: 0;
 }
 
-.project-title,
 .project p {
-  margin-left: 150;
-  text-align: left;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px; /* keeps lines readable */
 }
 
+.project p:last-child {
+  margin-top: 10px;
+}
 
+.project {
+  text-align: center;
+}
+
+/* ✅ Mobile responsiveness */
+@media (max-width: 768px) {
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 40px 20px; /* keep side padding for readability */
+  }
+  nav .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .logo {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  main {
+    padding: 30px 20px; /* increased side padding for mobile readability */
+  }
+
+  main p, main ul {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .homepage-photo {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .project-title,
+  .project p {
+    margin-left: 0;
+  }
+}
